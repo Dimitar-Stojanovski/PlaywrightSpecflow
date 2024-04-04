@@ -10,6 +10,7 @@ namespace PlaywrightSpecflow.Pages
     public class BasePage
     {
         public IPage Page { get; protected set; }
+
         public BasePage(IPage page)
         {
             Page = page;
@@ -26,6 +27,7 @@ namespace PlaywrightSpecflow.Pages
 
         protected async Task SelectDropDown(ILocator locator, string values, LocatorSelectOptionOptions? options = null)
             => await locator.SelectOptionAsync(values);
+
         protected async Task HooverOn(ILocator locator)
             => await locator.HoverAsync();
 

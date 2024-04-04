@@ -10,7 +10,6 @@ namespace PlaywrightSpecflow.Pages
     public class TextBoxPage:BasePage
     {
         
-
         private ILocator _fullNameInput;
 
         private ILocator _emailInput;
