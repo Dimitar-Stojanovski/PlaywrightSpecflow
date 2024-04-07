@@ -9,12 +9,12 @@ namespace PlaywrightSpecflow.StepDefinitions
     public class TextBoxStepDefinitions
     {
         public IPage Page { get; }
-        public TextBoxPage TextBoxPage { get; }
+        public TextBoxPage textBoxPage;
 
         public TextBoxStepDefinitions(IPage page)
         {
             Page = page;
-            TextBoxPage = new TextBoxPage(Page);
+            textBoxPage = new TextBoxPage(Page);
 
         }
 
@@ -29,37 +29,37 @@ namespace PlaywrightSpecflow.StepDefinitions
         [Given(@"I enter email ""([^""]*)""")]
         public async Task GivenIEnterEmail(string email)
         {
-            await TextBoxPage.EnterEmail(email);
+            await textBoxPage.EnterEmail(email);
         }
 
         [Given(@"I enter current address ""([^""]*)""")]
         public async Task GivenIEnterCurrentAddress(string currentAddress)
         {
-            await TextBoxPage.EnterCurrentAddress(currentAddress);
+            await textBoxPage.EnterCurrentAddress(currentAddress);
         }
 
         [Given(@"I enter permanent address ""([^""]*)""")]
         public async Task GivenIEnterPermanentAddress(string permanentAddress)
         {
-            await TextBoxPage.EnterPermanentAddress(permanentAddress);
+            await textBoxPage.EnterPermanentAddress(permanentAddress);
         }
 
         [When(@"I press submit button")]
         public async void WhenIPressSubmitButton()
         {
-           await TextBoxPage.ClickSubmitButton();
+           await textBoxPage.ClickSubmitButton();
         }
 
         [Then(@"I validate the result")]
         public async Task ThenIValidateTheResult()
         {
-            await TextBoxPage.VerifyTheFourParagraphs();
+            await textBoxPage.VerifyTheFourParagraphs();
         }
 
         [Given(@"I enter full name '([^']*)'")]
         public async Task GivenIEnterFullName(string fullName)
         {
-            await TextBoxPage.EnterFullName(fullName);        
+            await textBoxPage.EnterFullName(fullName);        
         }
 
         
@@ -67,25 +67,25 @@ namespace PlaywrightSpecflow.StepDefinitions
         [Given(@"I enter email as '([^']*)'")]
         public async Task GivenIEnterEmailAs(string email)
         {
-            await TextBoxPage.EnterEmail(email);
+            await textBoxPage.EnterEmail(email);
         }
 
         [Given(@"I enter current address as '([^']*)'")]
         public async Task GivenIEnterCurrentAddressAs(string address)
         {
-            await TextBoxPage.EnterCurrentAddress(address);
+            await textBoxPage.EnterCurrentAddress(address);
         }
 
         [Given(@"I enter permanent address as '([^']*)'")]
         public async Task GivenIEnterPermanentAddressAs(string address)
         {
-            await TextBoxPage.EnterPermanentAddress(address);
+            await textBoxPage.EnterPermanentAddress(address);
         }
 
         [Given(@"I enter fullnameInput as '([^']*)'")]
         public async Task GivenIEnterFullnameInputAs(string fullName)
         {
-            await TextBoxPage.EnterFullName(fullName);
+            await textBoxPage.EnterFullName(fullName);
         }
 
 

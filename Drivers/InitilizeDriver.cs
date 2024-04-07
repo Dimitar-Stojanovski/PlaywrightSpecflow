@@ -48,7 +48,7 @@ namespace PlaywrightSpecflow.Drivers
         private BrowserTypeLaunchOptions BrowserOptions =>
             new()
             {
-                Headless = false,
+                Headless = true,
                 Timeout = 1000 * 10
             };
 

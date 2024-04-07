@@ -9,9 +9,9 @@ namespace PlaywrightSpecflow.Support
     public sealed class Hooks
     {
         private readonly IObjectContainer objectContainer;
-        public IPage Page { get; set; }
+        public IPage? Page { get; set; }
 
-        public InitilizeDriver InitilizeDriver  { get; set; }
+        public InitilizeDriver? InitilizeDriver  { get; set; }
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
