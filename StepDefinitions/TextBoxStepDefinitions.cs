@@ -17,34 +17,31 @@ namespace PlaywrightSpecflow.StepDefinitions
             TextBoxPage = new TextBoxPage(Page);
 
         }
+
         [Given(@"I navigate to textbox url ""([^""]*)""")]
-        public async Task GivenINavigateToTextboxUrl(string p0)
+        public async Task GivenINavigateToTextboxUrl(string url)
         {
-           await Page.GotoAsync(p0);
+            await Page.GotoAsync(url);
         }
 
-        [Given(@"I enter full name ""([^""]*)""")]
-        public async Task GivenIEnterFullName(string p0)
-        {
-            await TextBoxPage.EnterFullName(p0);
-        }
+
 
         [Given(@"I enter email ""([^""]*)""")]
-        public async Task GivenIEnterEmail(string p0)
+        public async Task GivenIEnterEmail(string email)
         {
-            await TextBoxPage.EnterEmail(p0);
+            await TextBoxPage.EnterEmail(email);
         }
 
         [Given(@"I enter current address ""([^""]*)""")]
-        public async Task GivenIEnterCurrentAddress(string p0)
+        public async Task GivenIEnterCurrentAddress(string currentAddress)
         {
-            await TextBoxPage.EnterCurrentAddress(p0);
+            await TextBoxPage.EnterCurrentAddress(currentAddress);
         }
 
         [Given(@"I enter permanent address ""([^""]*)""")]
-        public async Task GivenIEnterPermanentAddress(string p0)
+        public async Task GivenIEnterPermanentAddress(string permanentAddress)
         {
-            await TextBoxPage.EnterPermanentAddress(p0);
+            await TextBoxPage.EnterPermanentAddress(permanentAddress);
         }
 
         [When(@"I press submit button")]
@@ -58,6 +55,44 @@ namespace PlaywrightSpecflow.StepDefinitions
         {
             await TextBoxPage.VerifyTheFourParagraphs();
         }
+
+        [Given(@"I enter full name '([^']*)'")]
+        public async Task GivenIEnterFullName(string fullName)
+        {
+            await TextBoxPage.EnterFullName(fullName);        
+        }
+
+        
+
+        [Given(@"I enter email as '([^']*)'")]
+        public async Task GivenIEnterEmailAs(string email)
+        {
+            await TextBoxPage.EnterEmail(email);
+        }
+
+        [Given(@"I enter current address as '([^']*)'")]
+        public async Task GivenIEnterCurrentAddressAs(string address)
+        {
+            await TextBoxPage.EnterCurrentAddress(address);
+        }
+
+        [Given(@"I enter permanent address as '([^']*)'")]
+        public async Task GivenIEnterPermanentAddressAs(string address)
+        {
+            await TextBoxPage.EnterPermanentAddress(address);
+        }
+
+        [Given(@"I enter fullnameInput as '([^']*)'")]
+        public async Task GivenIEnterFullnameInputAs(string fullName)
+        {
+            await TextBoxPage.EnterFullName(fullName);
+        }
+
+
+        
+
+
+
 
 
     }
